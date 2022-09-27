@@ -20,7 +20,7 @@ const Homescreen = ({navigation}) => {
       Picture={item.Pic}
       onpress={() =>
         navigation.navigate('Imagescr', {
-          openimage: item.Pic,
+          openimage: item,
         })
       }
     />

@@ -6,12 +6,20 @@ import FastImage from 'react-native-fast-image'
 import Carousel from 'react-native-snap-carousel'
 import { List } from '../Assests/Constants/Dumydata'
 import { useState } from 'react'
-
+import { useEffect } from 'react'
 const Imagescr = ({route}) => {
     const { openimage } = route.params;
-    console.log(List)
-    const [data, setdata] = useState(List);
+
+    const [data, setdata] = useState(List || []);
     // setdata(List);
+    useEffect(() => {
+      let a = data.filter(item => item !== openimage)
+      a.unshift(openimage)
+      console.log('URL: ',openimage)
+      console.log('data',a)
+      setdata(a);
+    }, [])
+    
   
   return (
     <View style={{flex:1,backgroundColor:Theme.Black}}>
