@@ -1,38 +1,24 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import React from 'react'
 import Customcatg from '../components/Customcatg';
-const Categ =[
-    {
-        id:'1',
-        text:'ghjklcv',
-    },
-    {
-        id:'2',
-        text:'ghjklcv',
-    },
-    {
-        id:'3',
-        text:'ghjklcv',
-    },
-    {
-        id:'4',
-        text:'ghjklcv',
-    },
-]
+import Theme from '../utils/Themes';
+import { categ } from '../Assests/Constants/Dumydata';
 
 const Categoriesscr = () => {
     const renderItem = ({item}) => (
-        <Customcatg title={item.text} />
+        <Customcatg title={item.title} />
         
     );
   return (
+    <View style={{flex:1,alignItems:'center'}}>
     <FlatList
-    style={{width:'50%'}}
-    data={Categ}
+  
+    data={categ}
     numColumns={2}
     renderItem={renderItem}
     // keyExtractor={Item => Item.id}
   />
+  </View>
   )
 }
 

@@ -8,7 +8,11 @@ import Imagescr from '../Screens/Imagescr';
 import Footdesignscr from '../Screens/Footdesignscr';
 import Categoriesscr from '../Screens/Categoriesscr';
 import Moredesignscr from '../Screens/Moredesignscr';
-import Drawernav from '../Screens/Drawernav';
+import Drawernav from './Drawernav';
+import Toptabnav from '../Screens/Toptabnav';
+import Toptabheader from '../Screens/Toptabheader';
+import Bottomtab from './Bottomtab';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +26,9 @@ const Index = () => {
       <Stack.Screen name="Footdesignscr" component={Footdesignscr} />
       <Stack.Screen name="Categoriesscr" component={Categoriesscr} />
       <Stack.Screen name="Moredesignscr" component={Moredesignscr} />
+      <Stack.Screen name="Toptabnav" component={Toptabnav} />
+      <Stack.Screen name="Toptabheader" component={Toptabheader} />
+      <Stack.Screen name="Bottomtab" component={Bottomtab} />
       {/* <Stack.Screen name="Drawernav" component={Drawernav} /> */}
       
       

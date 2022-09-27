@@ -5,16 +5,19 @@ import Custombox from '../components/Custombox'
 import { Foot } from '../Assests/Constants/Dumydata'
 import Theme from '../utils/Themes'
 
-const Footdesignscr = () => {
+const Footdesignscr = ({navigation}) => {
   const renderItem = ({item}) => (
-    <Custombox Picture={item.Pic} />
+    <Custombox Picture={item.Pic}   onpress={() =>
+      navigation.navigate('Imagescr', {
+        openimage: item.Pic,
+      })
+    } />
     
 );
   return (
     <View style={{flex:1,backgroundColor:Theme.lightbrown}}>
-      <Customheader/>
       <FlatList
-          style={{margin:6,}}
+          style={{margin:8,}}
           data={Foot}
           numColumns={3}
           renderItem={renderItem}

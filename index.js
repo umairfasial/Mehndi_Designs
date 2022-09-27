@@ -14,5 +14,8 @@ import Welcomescr from './src/Screens/Welcomescr';
 import Customcatg from './src/components/Customcatg';
 import Categoriesscr from './src/Screens/Categoriesscr';
 import Imagescr from './src/Screens/Imagescr';
+import Drawerscr from './src/Screens/Drawerscr';
+import Bottomtab from './src/navigations/Bottomtab';
+
 
 AppRegistry.registerComponent(appName, () =>App);

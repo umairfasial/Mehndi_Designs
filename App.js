@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,StatusBar } from 'react-native'
 import React from 'react'
 import Index from './src/navigations/Index'
 
 const App = () => {
   return (
+    <>
       <Index/>
+      <StatusBar backgroundColor='#7A5828' barStyle="light-content" />
+      </>
     
   )
 }

@@ -1,10 +1,10 @@
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
 // import {createDrawerNavigator} from '@react-navigation/drawer';
-// import Homescreen from './Homescreen';
-// import Footdesignscr from './Footdesignscr';
-// import Categoriesscr from './Categoriesscr';
-// import Moredesignscr from './Moredesignscr';
+// import Homescreen from '../Screens/Homescreen';
+// import Footdesignscr from '../Screens/Footdesignscr';
+// import Categoriesscr from '../Screens/Categoriesscr';
+// import Moredesignscr from '../Screens/Moredesignscr';
 
 // const Drawer = createDrawerNavigator();
 // const Drawernav = () => {

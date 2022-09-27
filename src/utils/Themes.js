@@ -8,6 +8,7 @@ const Theme={
     lightbrown:'#7A5828',
     Offwhite:'#B7A096',
     Darkbrown:'#3F2F2B',
+    lightgrey:'#363537',
     Black:'#131313',
     height:Dimensions.get("screen").height,
     width:Dimensions.get("screen").width

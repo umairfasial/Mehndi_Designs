@@ -1,18 +1,19 @@
-import { StyleSheet, Text, View, Image} from 'react-native'
+import { StyleSheet, Text, View, Image,StatusBar} from 'react-native'
 import React from 'react'
 import Theme from '../utils/Themes'
 
 
 const Welcomescr = ({navigation}) => {
   setTimeout(()=>{
-    navigation.navigate('Homescreen');
-  },3000)
+    navigation.navigate('Bottomtab');
+  },2000)
   return (
     <View style={styles.mnvew}>
+      
       <Text style={styles.txt}>Mehndi Designs</Text>
       
       <View style={{width:'30%',height:'15%'}}>
-        <Image source={require('../Assests/Images/pic.jpg')} style={styles.img} />
+        <Image  source={require('../Assests/Images/pic.jpg')} style={styles.img} />
         
       </View>
     </View>
