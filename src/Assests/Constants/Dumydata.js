@@ -182,11 +182,15 @@ export const List =[
     },
     {
       id:'21',
-      Pic:{uri:'https://www.mompreneurcircle.com/wp-content/uploads/2021/10/Simple-Jaali-Mehendi-Design-on-a-foot.jpg'},
+      Pic:{uri:'https://s3-us-west-2.amazonaws.com/shaadiwishnewbucket/1837c8c9-40c9-ba49-38fe-621fd1cbe9af.jpg'},
     },
     {
       id:'22',
-      Pic:{uri:'https://images.wedmegood.com/wp-content/uploads/2022/07/Screenshot_2022-07-14-18-03-34-44_965bbf4d18d205f782c6b8409c5773a4.jpg'},
+      Pic:{uri:'https://cdn0.weddingwire.in/article/7251/original/1280/jpg/81527-mehndi-designs-amrita-henna-mehndi-designs-full-hand.jpeg'},
+    },
+    {
+      id:'23',
+      Pic:{uri:'https://cdn0.weddingwire.in/article/7251/original/1280/jpg/81527-mehndi-designs-amrita-henna-mehndi-designs-full-hand.jpeg'},
     },
     
     
@@ -280,8 +284,5 @@ export const List =[
   ];
 
   export const morecateg =[
-    {
-      id:'1',
-      title:'fgh',
-    }
+   
   ]
