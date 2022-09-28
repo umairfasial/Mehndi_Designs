@@ -14,7 +14,7 @@ const Customcatg = ({title}) => {
           borderRadius: 3,
           paddingVertical: 10,
         }}>
-        <Text style={{fontSize: 18, textAlign: 'center', color: Theme.white}}>
+        <Text style={{fontSize: 18, marginLeft:'5%', color: Theme.white}}>
           {title}
         </Text>
       </TouchableOpacity>

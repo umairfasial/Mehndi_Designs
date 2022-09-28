@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList, ImageBackground} from 'react-native'
 import React from 'react'
 import Customcatg from '../components/Customcatg';
 import Theme from '../utils/Themes';
@@ -11,6 +11,10 @@ const Categoriesscr = () => {
     );
   return (
     <View style={{flex:1,alignItems:'center'}}>
+      <ImageBackground
+        style={{flex: 1, justifyContent: 'center'}}
+        source={require('../Assests/Images/pic1.jpg')}
+        resizeMode="cover">
     <FlatList
   
     data={categ}
@@ -18,6 +22,7 @@ const Categoriesscr = () => {
     renderItem={renderItem}
     // keyExtractor={Item => Item.id}
   />
+  </ImageBackground>
   </View>
   )
 }

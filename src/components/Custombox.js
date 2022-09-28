@@ -10,12 +10,12 @@ const Custombox = ({Picture,onpress}) => {
         onPress={onpress}
         style={{
           backgroundColor: Theme.lightbrown,
-          width: "33.4%",
+          width:Theme.width/3.1,
           height: Theme.height/6,
           borderWidth: 1,
           borderColor: Theme.Offwhite,
           borderRadius: 10,
-           padding:3,
+           padding:4,
         
         }}>
             <FastImage source={Picture} 
@@ -23,6 +23,8 @@ const Custombox = ({Picture,onpress}) => {
             style={{width:'100%',height:'100%',}}
             />
         </TouchableOpacity>
+        
+        
 
   );
 };
