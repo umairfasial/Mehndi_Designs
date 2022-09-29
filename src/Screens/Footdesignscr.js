@@ -7,9 +7,11 @@ import Theme from '../utils/Themes'
 
 const Footdesignscr = ({navigation}) => {
   const renderItem = ({item}) => (
+    // console.log('boss',item.Pic),
     <Custombox Picture={item.Pic}   onpress={() =>
       navigation.navigate('Imagescr', {
-        openimage: item.Pic,
+        openimage: item,
+        sendlist: Foot,
       })
     } />
     
