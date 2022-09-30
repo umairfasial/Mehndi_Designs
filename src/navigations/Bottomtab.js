@@ -7,8 +7,9 @@ import Gridviewscr from '../Screens/Gridviewscr';
 import Camerascr from '../Screens/Camerascr';
 import Explorescr from '../Screens/Explorescr';
 import Icon from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Theme from '../utils/Themes';
-import { color } from 'react-native-reanimated';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +38,7 @@ const Bottomtab = () => {
         component={Savedscr}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name="save" size={22} color={color} />
+            <MaterialIcons name="favorite" size={24} color={color} />
           ),
         }}
       />

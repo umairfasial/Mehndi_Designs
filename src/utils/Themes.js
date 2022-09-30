@@ -9,6 +9,7 @@ const Theme={
     Offwhite:'#B7A096',
     Darkbrown:'#3F2F2B',
     lightgrey:'#363537',
+    Mehndi:'#6B3307',
     Black:'#131313',
     height:Dimensions.get("screen").height,
     width:Dimensions.get("screen").width

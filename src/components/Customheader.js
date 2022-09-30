@@ -5,33 +5,28 @@ import Ionicons  from 'react-native-vector-icons/Ionicons'
 import MaterialIcons  from 'react-native-vector-icons/MaterialIcons'
 import Theme from '../utils/Themes'
 import { useState } from 'react'
+import  Share  from 'react-native-share'
 
 const Customheader = ({onpress}) => {
   const [modalVisible, setModalVisible] = useState(false);
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalView: {
-    width: '55%',
-    backgroundColor:Theme.lightgrey,
-    borderRadius: 5,
-    paddingVertical:10,
-    paddingHorizontal:30,
-    alignItems: 'center',
-  },
-  modl: {
-    fontSize: 15,
-    color:Theme.white,
-    fontWeight: 'bold',
-    marginLeft:'4%',
-    width:'100%',
-    marginHorizontal:'6%',
-    marginVertical:'10%',
-  },
-})
+    
+  const shareitem= async() =>{
+    const shareOptions = {
+      message: 'some message',
+      // url: 'some share url',
+      // social: Share.Social,
+      // whatsAppNumber: "9199999999",  // country code + phone number
+      // filename: 'test' , // only for base64 file in Android
+    };
+      try{
+        const ShareResponse = await Share.open(shareOptions);
+      }  catch(err){
+        console.log('Error',err)
+      }
+     // Share.shareSingle(shareOptions)
+    //   .then((res) => { console.log(res) })
+    //   .catch((err) => { err && console.log(err); });
+  }
 
   return (
     <View style={{flexDirection:'row',justifyContent:'space-between',backgroundColor:Theme.lightbrown,padding:15}}>
@@ -40,7 +35,7 @@ const styles = StyleSheet.create({
       <Text style={{fontSize:22,marginLeft:'5%',color:Theme.white}}>Mehndi Designs</Text>
       </View>
       <View style={{flexDirection:'row',alignItems:'center'}}>
-      <Icon name="share" size={25} color={Theme.white} style={{paddingHorizontal:30}} />
+      {/* <Icon onPress={shareitem} name="share" size={25} color={Theme.white} style={{paddingHorizontal:30}} /> */}
       <Icon onPress={() => setModalVisible(true)} name="dots-three-vertical" size={20} color={Theme.white} />
       </View>
       <Modal
@@ -85,3 +80,28 @@ const styles = StyleSheet.create({
 }
 
 export default Customheader;
+
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalView: {
+    width: '55%',
+    backgroundColor:Theme.lightgrey,
+    borderRadius: 5,
+    paddingVertical:10,
+    paddingHorizontal:30,
+    alignItems: 'center',
+  },
+  modl: {
+    fontSize: 15,
+    color:Theme.white,
+    fontWeight: 'bold',
+    marginLeft:'4%',
+    width:'100%',
+    marginHorizontal:'6%',
+    marginVertical:'10%',
+  },
+})
