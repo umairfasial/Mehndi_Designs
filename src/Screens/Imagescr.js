@@ -71,7 +71,7 @@ const Imagescr = ({route}) => {
               
                useScrollView={true}
                 data={data}
-                inactiveSlideScale={20}
+                inactiveSlideScale={2}
                 onSnapToItem={(index) => setfirst(index) }
                 
                 renderItem={({item, index }) => (
