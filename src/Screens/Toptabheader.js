@@ -7,7 +7,7 @@ import Toptabnav from './Toptabnav'
 const Toptabheader = () => {
   return (
     <View style={{flex:1}}>
-      <Customheader/>
+      <Customheader title={'Mehndi Designs'}/>
       <Toptabnav/>
     </View>
   )

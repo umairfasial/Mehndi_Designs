@@ -12,6 +12,7 @@ import Drawernav from './Drawernav';
 import Toptabnav from '../Screens/Toptabnav';
 import Toptabheader from '../Screens/Toptabheader';
 import Bottomtab from './Bottomtab';
+import Favrtimgsrc from '../Screens/Favrtimgsrc';
 
 
 
@@ -29,6 +30,7 @@ const Index = () => {
       <Stack.Screen name="Toptabnav" component={Toptabnav} />
       <Stack.Screen name="Toptabheader" component={Toptabheader} />
       <Stack.Screen name="Bottomtab" component={Bottomtab} />
+      <Stack.Screen name="Favrtimgsrc" component={Favrtimgsrc} />
       {/* <Stack.Screen name="Drawernav" component={Drawernav} /> */}
       
       
