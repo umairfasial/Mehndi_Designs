@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Modal, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Modal, TouchableOpacity, Alert, BackHandler} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -7,7 +7,7 @@ import Theme from '../utils/Themes';
 import {useState} from 'react';
 import Share from 'react-native-share';
 
-const Customheader = ({onpress, title, icon,colr}) => {
+const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const shareitem = async () => {
@@ -27,6 +27,30 @@ const Customheader = ({onpress, title, icon,colr}) => {
     //   .then((res) => { console.log(res) })
     //   .catch((err) => { err && console.log(err); });
   };
+  const nav = () =>{
+    setModalVisible(false);
+    fvrtpress();
+  };
+  const nav1 = () =>{
+    setModalVisible(false);
+    captpress();
+  };
+  const exitfn = () =>{
+    setModalVisible(false);
+    Alert.alert(
+      'Confirmation',
+      'Do you want to exit app ?',
+      [
+        {
+          text: "No",
+          onPress: () => console.log(),
+        },
+        {
+          text: "Yes", onPress: () => BackHandler.exitApp(),
+        }
+      ]
+    )
+  }
 
   return (
     <View
@@ -48,7 +72,7 @@ const Customheader = ({onpress, title, icon,colr}) => {
           onPress={onpress}
             name="favorite"
             size={25}
-            color={colr}
+            color={Theme.white}
             style={{paddingHorizontal: 30}}
           />
         ) : null}
@@ -71,11 +95,13 @@ const Customheader = ({onpress, title, icon,colr}) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <TouchableOpacity
+            onPress={nav1}
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <Icon name="save" size={22} color={Theme.white} />
-              <Text style={styles.modl}>Open Saved Designs</Text>
+              <Text style={styles.modl}>Open Capture Designs</Text>
             </TouchableOpacity>
             <TouchableOpacity
+            onPress={nav}
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <MaterialIcons name="favorite" size={22} color={Theme.white} />
               <Text style={styles.modl}>Favourite Designs</Text>
@@ -96,6 +122,7 @@ const Customheader = ({onpress, title, icon,colr}) => {
               <Text style={styles.modl}>More Categorized Designs</Text>
             </TouchableOpacity>
             <TouchableOpacity
+            onPress={exitfn}
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <Ionicons name="exit-outline" size={22} color={Theme.white} />
               <Text style={styles.modl}>Exit App!</Text>

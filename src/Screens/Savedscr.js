@@ -9,12 +9,13 @@ import Custombox from '../components/Custombox'
 const Savedscr = ({navigation}) => {
   const [data, setdata] = useState('');
 
-  const renderItem = ({item}) => {
+  const renderItem = ({item,index}) => {
     // console.log('Boss',item)
     return (
       <Custombox Picture={item} onpress={()=> 
          navigation.navigate('Favrtimgsrc',{
                showimage: data,
+               pic:index,
          })
       } />
     )
@@ -35,7 +36,10 @@ const Savedscr = ({navigation}) => {
   }, []);
   return (
     <View style={{flex:1}}>
-      <Customheader   title={'Favorite Designs'}/>
+      <Customheader 
+      captpress={() => navigation.navigate('Camerascr')}
+      fvrtpress={() => navigation.navigate('Savedscr')}
+      title={'Favorite Designs'}/>
       <FlatList
           style={{margin:8}}
           data={data}

@@ -2,57 +2,141 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import React from 'react';
 import Theme from '../utils/Themes';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/Entypo';
 import {useState} from 'react';
 import Customcarousel from '../components/Customcarousel';
 import Customheader from '../components/Customheader';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Favrtimgsrc = ({route}) => {
-  const {showimage} = route.params;
-  //   console.log('first', showimage);
+const Favrtimgsrc = ({route,navigation}) => {
+  const {showimage, pic} = route.params;
+  const [first, setfirst] = useState(pic);
+  const [Cdata, setCdata] = useState(showimage);
 
-  // const deleteitem = Index => {
-  //   console.log('hloo', Index);
-  //   let a = showimage;
-  //   a.splice(Index, 1);
-  //   setfirst([...a]);
-  // };
+
+  const deleteitem = async() => {
+    // console.log('first',Cdata.length)
+    // if (Cdata.length == 1) {
+    //   Cdata.pop()
+    //   await AsyncStorage.removeItem('favorite');
+    //   navigation.goBack()
+
+    // } else {
+      
+      let a = Cdata;
+      let arr = a.filter((item, index) => {
+        // console.log('lhr', index, first);
+        return index !== first;
+        //  index match ni hony chahiye
+      });
+
+      if(arr.length == first){
+        setfirst(0)
+      }
+
+      if(!arr.length){
+      await AsyncStorage.removeItem('favorite');
+      navigation.goBack()
+      }
+      
+      setCdata(arr);    
+      await AsyncStorage.setItem('favorite', JSON.stringify(arr));
+    // }
+   
+    
+    // let arr = Cdata.filter((item, index) => {
+    //   console.log('lhr', index, first);
+    //   return index !== first;
+    //   //  index match ni hony chahiye
+    // });
+    
+
+    // return
+    // if (Cdata.length == 2 ) {
+
+    //   console.log('if')
+
+
+    //   Cdata.splice(1,1)
+    //   console.log('ifffff',Cdata)
+    //   setCdata(Cdata)
+    //   await AsyncStorage.setItem('favorite', JSON.stringify(Cdata));
+    //   setfirst(0)
+
+    // }else if(Cdata.length == 1 && first == 0){
+    //   Cdata.pop()
+    //   setCdata(Cdata)
+    //         await AsyncStorage.removeItem('favorite');
+    //   navigation.goBack()
+
+    // } else {
+      // if(Cdata.length == 1){
+      //   Cdata.pop()
+      //     setCdata(Cdata)
+      //           await AsyncStorage.removeItem('favorite');
+      //     navigation.goBack()
+      // } else{
+       
+  
+        // if(arr.length == 1){
+        //   setfirst(0)
+        // }else if(arr.length == first){
+        //   setfirst(first - 1)
+        // }
+  
+        // console.log('hloo',arr);
+        // console.log('first', pic);
+        // a.splice(pic,1)
+       
+      // } 
+    
+      
+    // }
+  };
 
   return (
-   
-    <View style={{flex:1,backgroundColor:Theme.Mehndi,justifyContent:"space-between"}}>
-      <View style={{height:"10%", backgroundColor:'cyan'}}>
-      <Customheader/>
+    <View style={{flex: 1, backgroundColor: Theme.Mehndi}}>
+      <View>
+        <Customheader
+        captpress={() => navigation.navigate('Camerascr')}
+        fvrtpress={() => navigation.navigate('Savedscr')}
+        />
       </View>
-      <View style={{backgroundColor:'green',height:"90%",justifyContent:"center"}}>
-      <Customcarousel
-        data={showimage}
-        snapitem={(index) => console.log('Current', index)}
-        render={({item, index}) => (
-          <FastImage
-            style={{width: '100%', height: '5%',backgroundColor:'red'}}
-            resizeMode="contain"
-            source={item}
-          />
-        )}
-      />
-      <Icon
-        name="delete"
-        // onPress={()=>deleteitem(indx)}
-        size={30}
-        style={{
-          color:Theme.white,
-          alignSelf:'center',
-          backgroundColor: Theme.Mehndi,
-          width: '20%',
-          textAlign: 'center',
-          textAlignVertical: 'center',
-          borderRadius:5,
-      
-        }}
-      />
-</View>
-      
+      <View style={{flex: 1}}>
+        <Customcarousel
+          data={Cdata}
+          
+          snapitem={index => setfirst(index)}
+          firstItem={first}
+          render={({item, index}) => {
+            
+            // console.log('ggg', item) 
+            return(
+              <FastImage
+                style={{width: '100%', height: '80%', flex: 1}}
+                resizeMode="contain"
+                source={item}
+              />
+            )
+            }}
+        />
+        <Icon
+          name="circle-with-cross"
+          onPress={() => deleteitem(first)}
+          size={60}
+          style={{
+            color: Theme.white,
+            alignSelf: 'center',
+            backgroundColor: Theme.Mehndi,
+            width: '20%',
+            height: '9%',
+            textAlign: 'center',
+            textAlignVertical: 'center',
+            borderRadius: 5,
+            marginBottom: '12%',
+          }}
+        />
+      </View>
     </View>
   );
 };
@@ -91,6 +175,3 @@ const styles = StyleSheet.create({
         </View>
       </ScrollView> */
 }
-
- 
-

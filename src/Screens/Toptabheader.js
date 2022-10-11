@@ -1,18 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import Customheader from '../components/Customheader'
-import Toptabnav from './Toptabnav'
+import {StyleSheet, Text, View, Alert, BackHandler} from 'react-native';
+import React from 'react';
+import Customheader from '../components/Customheader';
+import Toptabnav from './Toptabnav';
+import {useEffect} from 'react';
+import Homescreen from './Homescreen';
 
-
-const Toptabheader = () => {
+const Toptabheader = ({navigation}) => {
   return (
-    <View style={{flex:1}}>
-      <Customheader title={'Mehndi Designs'}/>
-      <Toptabnav/>
+    <View style={{flex: 1}}>
+      <Customheader
+        captpress={() => navigation.navigate('Camerascr')}
+        fvrtpress={() => navigation.navigate('Savedscr')}
+        title={'Mehndi Designs'}
+      />
+      <Toptabnav />
     </View>
-  )
-}
+  );
+};
 
-export default Toptabheader
+export default Toptabheader;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

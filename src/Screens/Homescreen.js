@@ -5,6 +5,8 @@ import {
   FlatList,
   ImageBackground,
   SectionList,
+  BackHandler,
+  Alert
 } from 'react-native';
 import React from 'react';
 import Theme from '../utils/Themes';
@@ -12,12 +14,16 @@ import Customheader from '../components/Customheader';
 import Custombtn from '../components/Custombtn';
 import Custombox from '../components/Custombox';
 import {List} from '../Assests/Constants/Dumydata';
-
+import { useEffect } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 const Homescreen = ({navigation}) => {
-  <ImageBackground
-    style={{flex: 1, justifyContent: 'center'}}
-    source={require('../Assests/Images/pic1.jpg')}
-    resizeMode="cover"></ImageBackground>;
+
+ 
+    
+  
+  
+ 
 
   const renderSection = ({item, index}) => {
     const fList = item.list;

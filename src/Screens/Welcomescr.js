@@ -5,7 +5,7 @@ import Theme from '../utils/Themes'
 
 const Welcomescr = ({navigation}) => {
   setTimeout(()=>{
-    navigation.navigate('Bottomtab');
+    navigation.replace('Bottomtab');
   },2000)
   return (
     <View style={styles.mnvew}>

@@ -13,6 +13,9 @@ import Toptabnav from '../Screens/Toptabnav';
 import Toptabheader from '../Screens/Toptabheader';
 import Bottomtab from './Bottomtab';
 import Favrtimgsrc from '../Screens/Favrtimgsrc';
+import Savedscr from '../Screens/Savedscr';
+import Customheader from '../components/Customheader';
+import Camerascr from '../Screens/Camerascr';
 
 
 
@@ -31,6 +34,9 @@ const Index = () => {
       <Stack.Screen name="Toptabheader" component={Toptabheader} />
       <Stack.Screen name="Bottomtab" component={Bottomtab} />
       <Stack.Screen name="Favrtimgsrc" component={Favrtimgsrc} />
+      <Stack.Screen name="Savedscr" component={Savedscr} />
+      <Stack.Screen name="Customheader" component={Customheader} />
+      <Stack.Screen name="Camerascr" component={Camerascr} />
       {/* <Stack.Screen name="Drawernav" component={Drawernav} /> */}
       
       

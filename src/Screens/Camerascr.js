@@ -9,7 +9,7 @@ import Custombox from '../components/Custombox';
 import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-const Camerascr = () => {
+const Camerascr = ({navigation}) => {
   const [data, setdata] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   
@@ -107,7 +107,7 @@ const Camerascr = () => {
   return (
    console.log('first',data),
     <View style={{flex:1,backgroundColor:Theme.Mehndi,}}>
-      <Customheader title={'Capture Designs'}/>
+      <Customheader captpress={()=> navigation.navigate('Camerascr')} fvrtpress={()=> navigation.navigate('Savedscr')} title={'Capture Designs'}/>
       <View style={{marginTop:'2%'}}>
       <TouchableOpacity onPress={() => setModalVisible(true)}  style={styles.btn}>
         <Text style={{fontSize:18,fontWeight:'bold',color:Theme.white,textAlign:'center',}}>Add item</Text>

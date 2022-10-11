@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View,BackHandler,Alert} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Toptabheader from '../Screens/Toptabheader';
@@ -9,11 +9,45 @@ import Explorescr from '../Screens/Explorescr';
 import Icon from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Theme from '../utils/Themes';
-
+import { useRoute } from '@react-navigation/native';
+import { useEffect } from 'react';
 
 const Tab = createBottomTabNavigator();
 
 const Bottomtab = () => {
+  // const route = useRoute();
+  // console.log('hloo',route.name);
+  
+    
+  //     console.log('if')
+  //     useEffect(() => {
+  //       if(route.name == 'Homescreen'){const backaction = () =>{
+  //         Alert.alert(
+  //           'Confirmation',
+  //           'Do you want to exit app ?',
+  //           [
+  //             {
+  //               text: "No",
+  //               onPress: () => console.log(),
+  //             },
+  //             {
+  //               text: "Yes", onPress: () => BackHandler.exitApp(),
+  //             }
+  //           ]
+  //         );
+  //         return true;
+  //       }
+  //       BackHandler.addEventListener(
+  //         "hardwareBackPress",
+  //         backaction
+  //       );
+  //       return () => BackHandler.removeEventListener(
+  //         "hardwareBackPress",
+  //         backaction
+  //       );
+  //     }
+  
+  //     }, []);
   return (
     
     <Tab.Navigator
@@ -27,6 +61,7 @@ const Bottomtab = () => {
       <Tab.Screen
         name="Toptabheader"
         component={Toptabheader}
+        
         options={{ 
           tabBarIcon: ({color}) => (
             <Icon name="home" size={22} color={color} />

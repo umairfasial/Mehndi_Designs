@@ -7,7 +7,7 @@ import Carousel from 'react-native-snap-carousel'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { color } from 'react-native-reanimated'
+
 
 const Imagescr = ({route}) => {
     const { openimage,sendlist } = route.params;
@@ -61,7 +61,7 @@ const Imagescr = ({route}) => {
     // console.log('hhhh',data), 
     <View style={{flex:1,backgroundColor:Theme.Black}}>
      
-      <Customheader title={'Mehndi Designs'} onpress={additem} icon={true} colr={additem ?'red': null}/>
+      <Customheader title={'Mehndi Designs'} onpress={additem} icon={true} />
       
       <Carousel
       windowSize={1}
