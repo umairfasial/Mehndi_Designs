@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView ,Alert} from 'react-native'
 import React from 'react'
 import Customheader from '../components/Customheader'
 import Theme from '../utils/Themes'
@@ -26,14 +26,14 @@ const Imagescr = ({route}) => {
      const additem = async()=>{
       const val = await AsyncStorage.getItem('favorite');
       const job = JSON.parse(val);
-      console.log('second',job)
+      // console.log('second',job)
         if(job?.length){
-          console.log('if')
+          // console.log('if')
           let valeofindex = [...data][first]; //get current item of array
           let info = valeofindex.Pic;
           // console.log('first',info)
           let arr = [...job]
-          console.log('arry',arr)
+          // console.log('arry',arr)
 
           let check = false;
 
@@ -44,7 +44,15 @@ const Imagescr = ({route}) => {
           })
 
           if(check){
-            alert('good')
+            Alert.alert(
+              'Favorites',
+              'Image already added in favorites.',
+              [
+                {
+                  text: "OK", onPress: () => console.log(''),
+                }
+              ]
+            )
           }else{
             arr.unshift(info)
           }

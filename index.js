@@ -16,6 +16,10 @@ import Categoriesscr from './src/Screens/Categoriesscr';
 import Imagescr from './src/Screens/Imagescr';
 import Drawerscr from './src/Screens/Drawerscr';
 import Bottomtab from './src/navigations/Bottomtab';
+import Gridparenttab from './src/Screens/Gridparenttab';
+import Gridhand from './src/Screens/Gridhand';
+import Gridfoot from './src/Screens/Gridfoot';
+import Gridchildtab from './src/Screens/Gridchildtab';
 
 
 AppRegistry.registerComponent(appName, () =>App);

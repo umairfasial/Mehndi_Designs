@@ -35,7 +35,7 @@ const Savedscr = ({navigation}) => {
 
   }, []);
   return (
-    <View style={{flex:1}}>
+    <View style={{flex:1,backgroundColor:Theme.Mehndi}}>
       <Customheader 
       captpress={() => navigation.navigate('Camerascr')}
       fvrtpress={() => navigation.navigate('Savedscr')}
