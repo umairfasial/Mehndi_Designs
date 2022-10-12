@@ -95,7 +95,7 @@ const Bottomtab = () => {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Explorescr"
         component={Explorescr}
         options={{
@@ -103,7 +103,7 @@ const Bottomtab = () => {
             <Icon name="google-play" size={22} color={color} />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };

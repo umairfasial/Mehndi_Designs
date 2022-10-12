@@ -26,17 +26,37 @@ const Imagescr = ({route}) => {
      const additem = async()=>{
       const val = await AsyncStorage.getItem('favorite');
       const job = JSON.parse(val);
-      // console.log('second',job)
+      console.log('second',job)
         if(job?.length){
           console.log('if')
-          let valeofindex = [...data][first];
+          let valeofindex = [...data][first]; //get current item of array
           let info = valeofindex.Pic;
+          // console.log('first',info)
           let arr = [...job]
-          arr.unshift(info)
+          console.log('arry',arr)
+
+          let check = false;
+
+          arr.forEach(item => {
+            if(item.uri == info.uri){
+              check = true
+            }
+          })
+
+          if(check){
+            alert('good')
+          }else{
+            arr.unshift(info)
+          }
+
+        // console.log('includ',check)
           
+         
         await AsyncStorage.setItem("favorite",JSON.stringify(arr))
+        
         // console.log('fourth',arr)
         }else{
+          // console.log('else')
           let valeofindex = [...data][first];
           let info = valeofindex.Pic;
           let arr = []

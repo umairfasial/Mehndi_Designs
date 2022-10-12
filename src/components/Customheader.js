@@ -1,13 +1,16 @@
 import {StyleSheet, Text, View, Modal, TouchableOpacity, Alert, BackHandler} from 'react-native';
-import React from 'react';
+import React, {useRef} from 'react';
 import Icon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Theme from '../utils/Themes';
 import {useState} from 'react';
 import Share from 'react-native-share';
+import RBSheet from 'react-native-raw-bottom-sheet';
 
 const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
+  const refRBSheet = useRef();
+
   const [modalVisible, setModalVisible] = useState(false);
 
   const shareitem = async () => {
@@ -51,6 +54,13 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
       ]
     )
   }
+  const frbsheet =() =>{
+    refRBSheet.current.open();
+    setTimeout(() => {
+      refRBSheet.current.close();
+    }, 400);
+     onpress();
+  }
 
   return (
     <View
@@ -69,7 +79,7 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         {icon ? (
           <MaterialIcons
-          onPress={onpress}
+          onPress={frbsheet}
             name="favorite"
             size={25}
             color={Theme.white}
@@ -130,6 +140,21 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
           </View>
         </View>
       </Modal>
+      <RBSheet
+        ref={refRBSheet}       
+        customStyles={{
+          container: {
+            backgroundColor:'transparent',
+            height:'10%',
+            paddingVertical:5,
+          },
+          wrapper:{
+            backgroundColor:'transparent'
+          }
+       
+        }}>
+          <Text style={{fontSize:16,color:Theme.white,textAlign:'center'}}>Added to Favorites</Text>
+          </RBSheet>
     </View>
   );
 };
