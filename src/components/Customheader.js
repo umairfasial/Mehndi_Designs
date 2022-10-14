@@ -7,9 +7,11 @@ import Theme from '../utils/Themes';
 import {useState} from 'react';
 import Share from 'react-native-share';
 import RBSheet from 'react-native-raw-bottom-sheet';
+import { useNavigation } from '@react-navigation/native';
 
 const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
   const refRBSheet = useRef();
+  const navigation = useNavigation();
 
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -37,6 +39,10 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
   const nav1 = () =>{
     setModalVisible(false);
     captpress();
+  };
+  const grid = () =>{
+    setModalVisible(false);
+    navigation.navigate('Gridviewscr')
   };
   const exitfn = () =>{
     setModalVisible(false);
@@ -127,6 +133,7 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
               <Text style={styles.modl}>Rate this App</Text>
             </TouchableOpacity>
             <TouchableOpacity
+            onPress={grid}
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <MaterialIcons name="exit-to-app" size={22} color={Theme.white} />
               <Text style={styles.modl}>More Categorized Designs</Text>

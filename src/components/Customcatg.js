@@ -2,10 +2,11 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Theme from '../utils/Themes';
 
-const Customcatg = ({title}) => {
+const Customcatg = ({title,onpress}) => {
   return (
     <View style={{padding: 2}}>
       <TouchableOpacity
+      onPress={onpress}
         style={{
           flex: 1,
           backgroundColor: Theme.Darkbrown,

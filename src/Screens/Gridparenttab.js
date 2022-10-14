@@ -28,7 +28,7 @@ const Gridparenttab = () => {
         },
       }}>
       <Tab.Screen
-        name="G"
+        name="Floral"
         children={()=> <Gridchildtab hand={Floralhand} foot={Floralfoot} />}
         options={{
           tabBarLabel: 'Floral',
@@ -39,7 +39,7 @@ const Gridparenttab = () => {
         }}
       />
       <Tab.Screen
-        name="r"
+        name="Pakistani"
         children={()=> <Gridchildtab hand={Pakistanihand} foot={Pakistanifoot} />}
         options={{tabBarLabel: 'Pakistani',
         tabBarLabelStyle: {
@@ -49,7 +49,7 @@ const Gridparenttab = () => {
       }}
       />
       <Tab.Screen
-        name="i"
+        name="Indian"
         children={()=> <Gridchildtab hand={Indianhand} foot={Indianfoot} />}
         options={{tabBarLabel: 'Indian',
         tabBarLabelStyle: {
@@ -59,7 +59,7 @@ const Gridparenttab = () => {
       }}
       />
       <Tab.Screen
-        name="d"
+        name="Glitter"
         children={()=> <Gridchildtab hand={Glitterhand} foot={Glitterfoot} />}
         options={{tabBarLabel: 'Glitter',
         tabBarLabelStyle: {
@@ -69,7 +69,7 @@ const Gridparenttab = () => {
       }}
       />
       <Tab.Screen
-        name="c"
+        name="Arabic"
         children={()=> <Gridchildtab hand={Arabichand} foot={Arabicfoot} />}
         options={{tabBarLabel: 'Arabic',
         tabBarLabelStyle: {
@@ -79,7 +79,7 @@ const Gridparenttab = () => {
       }}
       />
       <Tab.Screen
-        name="h"
+        name="African"
         children={()=> <Gridchildtab hand={Africanhand} foot={Africanfoot} />}
         options={{tabBarLabel: 'African',
         tabBarLabelStyle: {

@@ -18,6 +18,8 @@ import Customheader from '../components/Customheader';
 import Camerascr from '../Screens/Camerascr';
 import Gridchildtab from '../Screens/Gridchildtab';
 import Gridparenttab from '../Screens/Gridparenttab';
+import Gridviewscr from '../Screens/Gridviewscr';
+import Camcarsoul from '../Screens/Camcarsoul';
 
 
 
@@ -40,6 +42,8 @@ const Index = () => {
       <Stack.Screen name="Customheader" component={Customheader} />
       <Stack.Screen name="Camerascr" component={Camerascr} />
       <Stack.Screen name="Gridparenttab" component={Gridparenttab} />
+      <Stack.Screen name="Gridviewscr" component={Gridviewscr} />
+      <Stack.Screen name="Camcarsoul" component={Camcarsoul} />
       {/* <Stack.Screen name="Drawernav" component={Drawernav} /> */}
       
       

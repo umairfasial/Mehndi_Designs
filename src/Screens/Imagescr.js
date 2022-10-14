@@ -87,7 +87,7 @@ const Imagescr = ({route}) => {
    
   return (
     // console.log('hhhh',data), 
-    <View style={{flex:1,backgroundColor:Theme.Black}}>
+    <View style={{flex:1,backgroundColor:Theme.Mehndi}}>
      
       <Customheader title={'Mehndi Designs'} onpress={additem} icon={true} />
       

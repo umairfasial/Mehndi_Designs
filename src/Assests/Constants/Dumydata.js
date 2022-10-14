@@ -1,3 +1,5 @@
+import { onPress } from "deprecated-react-native-prop-types/DeprecatedTextPropTypes";
+
  export const List = [
   {
     title: "Latest Mehndi Designs",
@@ -419,82 +421,83 @@
   ];
 
   export const categ=[
-    {
-      id:'1',
-      title:'Mehndi 2022'
-    },
+    // {
+    //   id:'1',
+    //   title:'Mehndi 2022'
+    // },
     {
       id:'2',
-      title:'Floral Designs'
+      title:'Floral',
+      
     },
     {
       id:'3',
-      title:'Pakistani Designs'
+      title:'Pakistani'
     },
     {
       id:'4',
-      title:'Glitter Designs'
+      title:'Glitter'
     },
-    {
-      id:'5',
-      title:'Rajasthani Designs'
-    },
-    {
-      id:'6',
-      title:'Moroccan Designs'
-    },
+    // {
+    //   id:'5',
+    //   title:'Rajasthani Designs'
+    // },
+    // {
+    //   id:'6',
+    //   title:'Moroccan Designs'
+    // },
     {
       id:'7',
-      title:'Arabic Designs'
+      title:'Arabic'
     },
-    {
-      id:'8',
-      title:'Bangle Style Designs'
-    },
+    // {
+    //   id:'8',
+    //   title:'Bangle Style Designs'
+    // },
     {
       id:'9',
-      title:'Indian Designs'
+      title:'Indian'
     },
     {
       id:'10',
-      title:'African Designs'
+      title:'African'
     },
-    {
-      id:'11',
-      title:'Bridal Designs'
-    },
-    {
-      id:'12',
-      title:'Popular Designs'
-    },
-    {
-      id:'13',
-      title:'Latest Designs'
-    },
-    {
-      id:'14',
-      title:'Mehndi Collection'
-    },
-    {
-      id:'15',
-      title:'Rangoli Designs'
-    },
-    {
-      id:'16',
-      title:'Nails Designs'
-    },
-    {
-      id:'17',
-      title:'Tatto Designs'
-    },
-    {
-      id:'18',
-      title:'Nails'
-    },
-    {
-      id:'19',
-      title:'Need More Designs?'
-    },
+    // {
+    //   id:'11',
+    //   title:'Bridal Designs'
+    // },
+    // {
+    //   id:'12',
+    //   title:'Popular Designs'
+    // },
+    // {
+    //   id:'13',
+    //   title:'Latest Designs'
+    // },
+    // {
+    //   id:'14',
+    //   title:'Mehndi Collection'
+    // },
+    // {
+    //   id:'15',
+    //   title:'Rangoli Designs'
+    // },
+    // {
+    //   id:'16',
+    //   title:'Nails Designs'
+    // },
+    // {
+    //   id:'17',
+    //   title:'Tatto Designs'
+    // },
+    // {
+    //   id:'18',
+    //   title:'Nails'
+    // },
+    // {
+    //   id:'19',
+    //   title:'Need More Designs?'
+    // },
     
   ];
 
@@ -964,200 +967,200 @@
   export const Arabichand =[
     {
       id:'1',
-      Pic:{uri:''}
+      Pic:{uri:'https://efashionlady.com/wp-content/uploads/2019/12/arabic-mehndi-designs-beautiful.jpg'}
     },
     {
       id:'2',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.ytimg.com/vi/lbv9kT-2mqg/maxresdefault.jpg'}
     },
     {
       id:'3',
-      Pic:{uri:''}
+      Pic:{uri:'https://4.bp.blogspot.com/-boQ_zt4ejQI/W1q63w-bgoI/AAAAAAAAH3E/cijwaRtTEu4E4xcWQBNzJ7sTdfdQH08FACLcBGAs/s1600/arabic%2Bmehndi%2Bdesigns%2Bfor%2Bfull%2Bhands%2B%252822%2529.jpg'}
     },
     {
       id:'4',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.k4fashion.com/wp-content/uploads/2020/02/Simple-Arabic-Mehndi-Designs-for-Front-Hand-1.jpg'}
     },
     {
       id:'5',
-      Pic:{uri:''}
+      Pic:{uri:'https://image.wedmegood.com/resized-nw/600X/wp-content/uploads/2019/02/268518753f7ac5a969be5ac9191a50f8.jpg'}
     },
     {
       id:'6',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.shaadidukaan.com/editor-img/image/mehandi/arabic-mehndi-designs/for-full-hand/for-full-hand10.jpg'}
     },
     {
       id:'7',
-      Pic:{uri:''}
+      Pic:{uri:'https://image.wedmegood.com/resized-nw/600X/wp-content/uploads/2019/01/Exquisite-Arabic-Mehndi-Designs.jpg'}
     }, {
       id:'8',
-      Pic:{uri:''}
+      Pic:{uri:'https://image.wedmegood.com/resized-nw/700X/wp-content/uploads/2019/01/1530530075_WhatsApp_Image_2018_07_02_at_4.33.49_PM.jpeg'}
     },
     {
       id:'9',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.shaadidukaan.com/editor-img/image/mehandi/arabic-mehndi-designs/for-backhand/for-backhand11.jpg'}
     },
     {
       id:'10',
-      Pic:{uri:''}
+      Pic:{uri:'https://i0.wp.com/www.k4fashion.com/wp-content/uploads/2020/02/Floral-Arabic-Mehndi-Design-for-Back-Hand.jpg?resize=600%2C750&ssl=1'}
     },
     {
       id:'11',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/originals/49/fd/96/49fd964a57af94ebadfa2301ef3b35d3.jpg'}
     },
     {
       id:'12',
-      Pic:{uri:''}
+      Pic:{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCpa-Isw-0z8_GXDs1jDBKxyRQLrcRY2eQ_w&usqp=CAU'}
     },
   ];
 
   export const Arabicfoot =[
     {
       id:'1',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/originals/01/bd/55/01bd55ec2a99c2b403bb98942005b6c5.jpg'}
     },
     {
       id:'2',
-      Pic:{uri:''}
+      Pic:{uri:'https://wedbook.in/wp-content/uploads/2021/02/1.-Foot-Mehndi-Design-Arabic-819x1024.jpg'}
     },
     {
       id:'3',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/736x/02/12/0c/02120c5e7658e198090596452dc03b24.jpg'}
     },
     {
       id:'4',
-      Pic:{uri:''}
+      Pic:{uri:'https://wedbook.in/wp-content/uploads/2021/02/15.-easy-feet-mehendi-871x1024.jpg'}
     },
     {
       id:'5',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/564x/60/fc/74/60fc74cf6c46edab37f45981f5e7167a.jpg'}
     },
     {
       id:'6',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.k4fashion.com/wp-content/uploads/2019/07/Arabic-Feet-Mehndi-Designs.jpg'}
     },
     {
       id:'7',
-      Pic:{uri:''}
+      Pic:{uri:'https://stylesatlife.com/wp-content/uploads/2019/12/Mehndi-3.jpg.webp'}
     }, {
       id:'8',
-      Pic:{uri:''}
+      Pic:{uri:'https://crayon.pk/wp-content/uploads/2019/07/Sound-Foot-Arabic-Mehndi-Designs.jpg'}
     },
     {
       id:'9',
-      Pic:{uri:''}
+      Pic:{uri:'https://cdn0.weddingwire.in/article/1333/original/1280/jpg/23331-simple-mehndi-designs-for-feet-arooj-mehndi-the-branched-florals.jpeg'}
     },
     {
       id:'10',
-      Pic:{uri:''}
+      Pic:{uri:'https://crayon.pk/wp-content/uploads/2019/07/Creative-Circle-Foot-Arabic-Mehndi-Designs.jpg'}
     },
     {
       id:'11',
-      Pic:{uri:''}
+      Pic:{uri:'https://dnd.com.pk/wp-content/uploads/2021/11/15-Best-Arabic-Mehndi-Design-Photos-Images-2020-2021-8.png'}
     },
     {
       id:'12',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.southindiafashion.com/wp-content/uploads/2019/03/peacock-design-mehendi-for-bride.jpg'}
     },
   ];
 
   export const Africanhand =[
     {
       id:'1',
-      Pic:{uri:''}
+      Pic:{uri:'https://mehndidesign.com/file/images/9-2020/17-african-mehndi-design.jpg'}
     },
     {
       id:'2',
-      Pic:{uri:''}
+      Pic:{uri:'https://mehndidesign.com/file/images/9-2020/8-african-mehndi-design.jpg'}
     },
     {
       id:'3',
-      Pic:{uri:''}
+      Pic:{uri:'https://image-marketing.s3.ap-south-1.amazonaws.com/wp-content/uploads/2020/04/05171459/8.-African-mehendi-design-745x1024.jpg'}
     },
     {
       id:'4',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/600x315/12/47/3b/12473b228fc833616c4f812fece22d5c.jpg'}
     },
     {
       id:'5',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.misspretty.in/wp-content/uploads/2021/05/Easy-Henna-Designs-for-Beginners-Palm.jpg'}
     },
     {
       id:'6',
-      Pic:{uri:''}
+      Pic:{uri:'https://pakistanimage.com/wp-content/uploads/2020/04/WhatsApp-Image-2020-04-19-at-12.09.30-PM-4.jpeg'}
     },
     {
       id:'7',
-      Pic:{uri:''}
+      Pic:{uri:'https://mehndidesign.com/file/images/9-2020/2-african-mehndi-design.jpg'}
     }, {
       id:'8',
-      Pic:{uri:''}
+      Pic:{uri:'http://www.pinkvilla.com/files/styles/large/public/henna-4605108_640.jpg?itok=Y9YL5cTy'}
     },
     {
       id:'9',
-      Pic:{uri:''}
+      Pic:{uri:'https://csdt.org/culture/henna/img/mideast3.png'}
     },
     {
       id:'10',
-      Pic:{uri:''}
+      Pic:{uri:'http://www.sheclick.com/wp-content/uploads/2010/10/Top-African-Mehndi-Design-Gallery.jpg'}
     },
     {
       id:'11',
-      Pic:{uri:''}
+      Pic:{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVAfB9jZ-n7c0ZFi-1zxasv2j7eg3Dq14t4A&usqp=CAU'}
     },
     {
       id:'12',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.postoast.com/wp-content/uploads/2019/07/Moroccan-Mehndi-design.jpg'}
     },
   ];
 
   export const Africanfoot =[
     {
       id:'1',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/originals/77/2d/68/772d68a810f91ab29e98541eb28fffed.jpg'}
     },
     {
       id:'2',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/originals/6d/76/d4/6d76d4bff95aa7f8cd57bb4aaf5981bd.jpg'}
     },
     {
       id:'3',
-      Pic:{uri:''}
+      Pic:{uri:'https://stylesatlife.com/wp-content/uploads/2013/10/Abstract-foot-mehndi-designs.jpg.webp'}
     },
     {
       id:'4',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/736x/bb/c1/31/bbc13156a467ddea76f8230ba64f597d.jpg'}
     },
     {
       id:'5',
-      Pic:{uri:''}
+      Pic:{uri:'https://i.pinimg.com/736x/8d/f2/0f/8df20fb78fa20d7fa8aa9799d495e573.jpg'}
     },
     {
       id:'6',
-      Pic:{uri:''}
+      Pic:{uri:'https://s3.ap-southeast-1.amazonaws.com/meesho-static-ethinos/s3fs-public/inline-images/83380148_133608998130592_4132696964660816394_n.jpg?br325ivJQQfkUHyTgaJhCEk.oJl8Xfl.'}
     },
     {
       id:'7',
-      Pic:{uri:''}
+      Pic:{uri:'https://stylesatlife.com/wp-content/uploads/2018/02/African-bail-designs-for-leg.jpg.webp'}
     }, {
       id:'8',
-      Pic:{uri:''}
+      Pic:{uri:'https://mehndidesign.com/file/images/9-2020/13-african-mehndi-design.jpg'}
     },
     {
       id:'9',
-      Pic:{uri:''}
+      Pic:{uri:'https://fashionkidunyaa.com/wp-content/uploads/2018/05/arabic-mehndi-design-for-foot.png'}
     },
     {
       id:'10',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.arabiaweddings.com/sites/default/files/styles/max750/public/albums/2020/09/11/henna_designs_for_feet_5.jpg?itok=0WjCkjSM'}
     },
     {
       id:'11',
-      Pic:{uri:''}
+      Pic:{uri:'https://www.aboutpakistan.com/news/wp-content/uploads/2020/05/65-1.jpg'}
     },
     {
       id:'12',
-      Pic:{uri:''}
+      Pic:{uri:'https://cdn2.thebridalbox.com/wp-content/uploads/2015/11/black-mehndi-design-for-feet.jpg'}
     },
   ];
 

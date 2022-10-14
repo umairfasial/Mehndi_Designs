@@ -4,17 +4,17 @@ import Customcatg from '../components/Customcatg';
 import Theme from '../utils/Themes';
 import { categ } from '../Assests/Constants/Dumydata';
 
-const Categoriesscr = () => {
+const Categoriesscr = ({navigation}) => {
     const renderItem = ({item}) => (
-        <Customcatg title={item.title} />
+        <Customcatg onpress={()=>navigation.navigate(item.title)} title={item.title} />
         
     );
   return (
-    <View style={{flex:1,alignItems:'center'}}>
-      <ImageBackground
+    <View style={{flex:1,alignItems:'center',backgroundColor:Theme.Mehndi,paddingVertical:9}}>
+      {/* <ImageBackground
         style={{flex: 1, justifyContent: 'center'}}
         source={require('../Assests/Images/pic1.jpg')}
-        resizeMode="cover">
+        resizeMode="cover"> */}
     <FlatList
   
     data={categ}
@@ -22,7 +22,7 @@ const Categoriesscr = () => {
     renderItem={renderItem}
     // keyExtractor={Item => Item.id}
   />
-  </ImageBackground>
+  {/* </ImageBackground> */}
   </View>
   )
 }

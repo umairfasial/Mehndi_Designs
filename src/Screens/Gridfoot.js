@@ -8,12 +8,12 @@ const Gridfoot = ({navigation,data}) => {
     const renderItem = ({item}) => (
         // console.log('boss',item.Pic),
         <Custombox Picture={item.Pic} 
-          onpress={() =>
-          navigation.navigate('Imagescr', {
-            openimage: item,
-            sendlist: Indianfoot,
-          })
-        } 
+        //   onpress={() =>
+        //   navigation.navigate('Imagescr', {
+        //     openimage: item,
+        //     sendlist: Indianfoot,
+        //   })
+        // } 
         />
         
     );
