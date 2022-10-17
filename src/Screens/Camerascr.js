@@ -140,6 +140,7 @@ const Camerascr = ({navigation}) => {
             Add item
           </Text>
         </TouchableOpacity>
+        {data?.length ? (
         <FlatList
           style={{margin: 8}}
           data={data}
@@ -147,6 +148,17 @@ const Camerascr = ({navigation}) => {
           renderItem={renderItem}
           // keyExtractor={Item => Item.id}
         />
+        ) : (
+          <View style={{marginTop:'60%'}}>
+            <Text style={{
+               color: Theme.white,
+              fontSize: 20,
+              fontFamily: 'arial',
+              textAlign: 'center',
+            
+              }}>You have no Captured Images</Text>
+          </View>
+        )}
       </View>
       {/* <View style={{marginTop:'2%'}}>
       <TouchableOpacity onPress={Opengal} style={styles.btn}>

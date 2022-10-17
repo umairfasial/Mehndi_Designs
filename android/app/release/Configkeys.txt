@@ -1,0 +1,4 @@
+key file name = mehndikey
+password= mehndikey
+alias= mehndikey
+key alias= mehndikey

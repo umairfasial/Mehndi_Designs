@@ -5,6 +5,8 @@ import Theme from '../utils/Themes';
 import Gridchildtab from './Gridchildtab';
 import { Africanfoot, Africanhand, Arabicfoot, Arabichand, Floralfoot, Floralhand, Glitterfoot, Glitterhand, Indianfoot, Indianhand, Pakistanifoot, Pakistanihand } from '../Assests/Constants/Dumydata';
 import Gridhand from './Gridhand';
+import { useEffect, useState } from 'react';
+
 const Tab = createMaterialTopTabNavigator();
 
 const Gridparenttab = () => {
