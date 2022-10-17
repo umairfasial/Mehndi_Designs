@@ -6,7 +6,8 @@ import Theme from '../utils/Themes'
 const Custombtn = ({onpress,title}) => {
     const styles = StyleSheet.create({
         vew:{
-           marginTop:'2%',
+           paddingVertical:'2%',
+           backgroundColor:Theme.Mehndi,
         },
         btn:{
             flexDirection:'row',
@@ -24,9 +25,9 @@ const Custombtn = ({onpress,title}) => {
     })
   return (
     <View style={styles.vew}>
-        <TouchableOpacity onPress={onpress} style={styles.btn}>
+        <TouchableOpacity onPress={onpress} disabled={true} style={styles.btn}>
         <Text style={{fontSize:18,fontWeight:'bold',color:Theme.white,}}>{title}</Text>
-        <Text style={{color:Theme.white}}>More</Text>
+        {/* <Text style={{color:Theme.white}}>More</Text> */}
       </TouchableOpacity>
     </View>
   )

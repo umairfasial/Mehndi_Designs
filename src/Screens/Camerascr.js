@@ -38,7 +38,11 @@ const Camerascr = ({navigation}) => {
   // }
   const Opengal = () => {
     setModalVisible(false);
-    ImagePicker.openPicker({}).then(async images => {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 400,
+      cropping: true,
+    }).then(async images => {
       console.log(images);
       if (data?.length) {
         // console.log('if condition')

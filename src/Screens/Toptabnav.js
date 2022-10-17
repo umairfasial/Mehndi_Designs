@@ -6,8 +6,14 @@ import Footdesignscr from '../Screens/Footdesignscr';
 import Categoriesscr from '../Screens/Categoriesscr';
 import Moredesignscr from '../Screens/Moredesignscr';
 import Customheader from '../components/Customheader';
+
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Theme from '../utils/Themes';
+import Gridviewscr from './Gridviewscr';
+import Gridparenttab from './Gridparenttab';
+
 const Tab = createMaterialTopTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const Toptabnav = () => {
   return (
@@ -18,7 +24,7 @@ const Toptabnav = () => {
         tabBarLabelStyle:{color:Theme.white,},
         
         tabBarIndicatorStyle:{backgroundColor:Theme.white},
-        tabBarItemStyle:{height:Theme.height/22,marginTop:'-5%',width:'auto',paddingHorizontal:18}
+        tabBarItemStyle:{height:Theme.height/22,marginTop:'-5%',width:'auto',paddingHorizontal:'4%'}
       }}>
       <Tab.Screen name="Homescreen" component={Homescreen} options={{tabBarLabel:'Hand Designs'}} />
       <Tab.Screen name="Footdesignscr" component={Footdesignscr} options={{tabBarLabel:'Foot Designs',}} />
@@ -28,6 +34,16 @@ const Toptabnav = () => {
   );
 };
 
+
 export default Toptabnav;
+
+//  export const TopTabStack = () =>{
+//   return(
+//     <Stack.Navigator initialRouteName='Toptabnav' screenOptions={{headerShown:false}}>
+//     <Stack.Screen name="Toptabnav" component={Toptabnav} />
+//     <Stack.Screen name="Gridparenttab" component={Gridparenttab} />
+//     </Stack.Navigator>
+//   );
+// }
 
 const styles = StyleSheet.create({});

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView,ImageBackground} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import React from 'react';
 import Theme from '../utils/Themes';
@@ -88,39 +88,23 @@ const Favrtimgsrc = ({route,navigation}) => {
         // console.log('first', pic);
         // a.splice(pic,1)
        
-      // } 
-    
-      
+      // }   
     // }
   };
-
-  return (
-    <View style={{flex: 1, backgroundColor: Theme.Mehndi}}>
-      <View>
-        <Customheader
-        captpress={() => navigation.navigate('Camerascr')}
-        fvrtpress={() => navigation.navigate('Savedscr')}
-        />
-      </View>
-      <View style={{flex: 1}}>
-        <Customcarousel
-          data={Cdata}
-          
-          snapitem={index => setfirst(index)}
-          firstItem={first}
-          render={({item, index}) => {
-            
-            // console.log('ggg', item) 
-            return(
-              <FastImage
-                style={{width: '100%', height: '80%', flex: 1}}
-                resizeMode="contain"
-                source={item}
-              />
-            )
-            }}
-        />
-        <Icon
+  const render = ({item,index}) => {
+    // console.log('hlo',item.Pic)
+    return (
+      <ImageBackground
+      style={{flex: 1, justifyContent: 'center'}}
+      source={item}
+      blurRadius={8}
+      resizeMode="cover">
+      <FastImage
+        style={{width: '100%', height: '100%'}}
+        resizeMode="contain"
+        source={item}
+      />
+       <Icon
           name="circle-with-cross"
           onPress={() => deleteitem(first)}
           size={60}
@@ -133,9 +117,30 @@ const Favrtimgsrc = ({route,navigation}) => {
             textAlign: 'center',
             textAlignVertical: 'center',
             borderRadius: 5,
-            marginBottom: '12%',
+            marginBottom: '18%',
           }}
         />
+      </ImageBackground>
+    );
+  };
+
+  return (
+    <View style={{flex: 1,backgroundColor:Theme.Mehndi}}>
+      <View>
+        <Customheader
+        captpress={() => navigation.navigate('Camerascr')}
+        fvrtpress={() => navigation.navigate('Savedscr')}
+        />
+      </View>
+      <View style={{flex: 1}}>
+        <Customcarousel
+          data={Cdata}
+          
+          snapitem={index => setfirst(index)}
+          firstItem={first}
+          render={render}
+        />
+       
       </View>
     </View>
   );

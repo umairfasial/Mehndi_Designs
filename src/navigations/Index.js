@@ -9,7 +9,7 @@ import Footdesignscr from '../Screens/Footdesignscr';
 import Categoriesscr from '../Screens/Categoriesscr';
 import Moredesignscr from '../Screens/Moredesignscr';
 import Drawernav from './Drawernav';
-import Toptabnav from '../Screens/Toptabnav';
+import Toptabnav, { TopTabStack } from '../Screens/Toptabnav';
 import Toptabheader from '../Screens/Toptabheader';
 import Bottomtab from './Bottomtab';
 import Favrtimgsrc from '../Screens/Favrtimgsrc';

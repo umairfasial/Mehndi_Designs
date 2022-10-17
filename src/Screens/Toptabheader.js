@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, Alert, BackHandler} from 'react-native';
 import React from 'react';
 import Customheader from '../components/Customheader';
-import Toptabnav from './Toptabnav';
+import Toptabnav, { TopTabStack } from './Toptabnav';
 import {useEffect} from 'react';
 import Homescreen from './Homescreen';
 

@@ -17,11 +17,11 @@ const Footdesignscr = ({navigation}) => {
     
 );
   return (
-    <View style={{flex:1}}>
-      <ImageBackground
+    <View style={{flex:1,backgroundColor:Theme.Mehndi}}>
+      {/* <ImageBackground
         style={{flex: 1, justifyContent: 'center'}}
         source={require('../Assests/Images/pic1.jpg')}
-        resizeMode="cover">
+        resizeMode="cover"> */}
       <FlatList
           style={{margin:8,}}
           data={Foot}
@@ -29,7 +29,7 @@ const Footdesignscr = ({navigation}) => {
           renderItem={renderItem}
           // keyExtractor={Item => Item.id}
         />
-        </ImageBackground>
+        {/* </ImageBackground> */}
     </View>
   )
 }

@@ -3,10 +3,12 @@ import React from 'react'
 import Customcatg from '../components/Customcatg';
 import Theme from '../utils/Themes';
 import { categ } from '../Assests/Constants/Dumydata';
+import { useNavigation } from '@react-navigation/native';
 
-const Categoriesscr = ({navigation}) => {
+const Categoriesscr = () => {
+  const navigation = useNavigation();
     const renderItem = ({item}) => (
-        <Customcatg onpress={()=>navigation.navigate(item.title)} title={item.title} />
+        <Customcatg onpress={()=>navigation.navigate("Gridviewscr",{screen:item.title})} title={item.title} />
         
     );
   return (

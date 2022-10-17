@@ -30,8 +30,8 @@ const Homescreen = ({navigation}) => {
     return (
       <View
         style={{
-          paddingVertical: 10,
           width: Theme.width,
+          backgroundColor:Theme.Mehndi,
           alignItems: 'center',
         }}>
         <FlatList
@@ -65,16 +65,16 @@ const Homescreen = ({navigation}) => {
   //   return item.Pic
   // }
   return (
-    <ImageBackground
-      style={{flex: 1, justifyContent: 'center'}}
-      source={require('../Assests/Images/pic1.jpg')}
-      resizeMode="cover">
+    // <ImageBackground
+    //   style={{flex: 1, justifyContent: 'center'}}
+    //   source={require('../Assests/Images/pic1.jpg')}
+    //   resizeMode="cover">
       <SectionList
         sections={List}
         renderSectionHeader={renderSectionHeader}
         renderItem={renderSection}
       />
-    </ImageBackground>
+    // </ImageBackground>
   );
 
   //   // <Custombox
@@ -157,9 +157,4 @@ const Homescreen = ({navigation}) => {
 
 export default Homescreen;
 
-const styles = StyleSheet.create({
-  mnvew: {
-    flex: 1,
-    marginTop: '-2%',
-  },
-});
+const styles = StyleSheet.create({});

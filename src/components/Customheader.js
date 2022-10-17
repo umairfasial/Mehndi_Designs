@@ -77,7 +77,7 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
         padding: 15,
       }}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <Icon  name="menu" size={25} color={Theme.white} />
+        {/* <Icon  name="menu" size={25} color={Theme.white} /> */}
         <Text style={{fontSize: 22, marginLeft: '5%', color: Theme.white}}>
           {title}
         </Text>
@@ -122,7 +122,7 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
               <MaterialIcons name="favorite" size={22} color={Theme.white} />
               <Text style={styles.modl}>Favourite Designs</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <Icon name="share" size={22} color={Theme.white} />
               <Text style={styles.modl}>Share this App</Text>
@@ -131,7 +131,7 @@ const Customheader = ({onpress, title, icon,colr,fvrtpress,captpress}) => {
               style={{flexDirection: 'row', alignItems: 'center'}}>
               <MaterialIcons name="favorite" size={22} color={Theme.white} />
               <Text style={styles.modl}>Rate this App</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity
             onPress={grid}
               style={{flexDirection: 'row', alignItems: 'center'}}>

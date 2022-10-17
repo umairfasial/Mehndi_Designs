@@ -15,12 +15,13 @@ const Custombox = ({Picture,onpress}) => {
           borderWidth: 1,
           borderColor: Theme.Offwhite,
           borderRadius: 10,
-           padding:4,
+          overflow:'hidden',
+          alignItems:'center',
         
         }}>
             <FastImage source={Picture} 
-            resizeMode="stretch"
-            style={{width:'100%',height:'100%',}}
+            resizeMode="cover"
+            style={{width:'100%',height:'100%',borderRadius:10,alignSelf:'center'}}
             />
         </TouchableOpacity>
         
